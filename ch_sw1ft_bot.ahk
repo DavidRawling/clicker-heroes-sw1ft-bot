@@ -635,6 +635,10 @@ visionRun() {
 		t += 1
 		sleep 1000
 
+		; Move the mouse pointer 1 pixel to the right of current location, then back (prevent screen lock):
+		MouseMove, 1, 0, 10, R
+		MouseMove, -1, 0, 10, R
+
 	} until zone > getEndZone() or readyToAscend
 
 	if (earlyGameMode) {
